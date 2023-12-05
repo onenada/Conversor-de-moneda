@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinMaster</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- BLOQUE HEADER -->
+    <header>
+        <img src="media/nadaWebLogo1.png" alt="Logo OneNada" height="100">
+        <h1>CONVERSOR DE MONEDA</h1>
+    </header>
+    <!-- BLOQUE MAIN/FORMULARIO -->
+    <main>
+        <div>
+            <p id="error"></p>
+        </div>
+        <form id="conversorForm">
+            <div class="itemform">
+                <label for="tipod">Tipo de cambio*</label>
+                <select name="tipod" id="tipod" required>
+                    <option value="0">--Tipo de cambio--</option>
+                    <option value="1">EURO a DÓLAR</option>
+                    <option value="2">DÓLAR a EURO</option>
+                    <option value="3">ARG a DÓLAR</option>
+                </select>
+            </div>
+            <div class="itemform">
+                <label for="monto">Monto *</label>
+                <input type="text" name="monto"  id="monto" required minlength="1">
+                <input type="text" name="resultado" value="Resultado" id="resultado" readonly>
+            </div>
+            <div class="itemForm">
+                <p id="obligatorio">* Obligatorio</p>
+            </div>
+            <div class="itemform">
+                <input type="submit" value="CONVERTIR" id="convertir">
+            </div>
+        </form>
+
+    </main>
+    <!-- BLOQUE FOOTER -->
+    <footer>
+        <p>Proyecto FrontEnd con HTML, CSS y JS (Conversor de monedas)</p>
+
+    </footer>
+    <!-- CODIGO JS -->
+    <script src="Js/app.js"></script>
+</body>
+</html>
