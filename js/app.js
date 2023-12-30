@@ -1,12 +1,11 @@
-// ---------------Variables  y Objetos DOM---------------
+// Variables //
+var form;
+var tipod;
+var montoIn;
+var resultado;
+var error;
 
-const form=document.getElementById("conversorForm");
-const tipod=document.getElementById("tipod");
-const montoIn=document.getElementById("monto");
-const resultado=document.getElementById("resultado");
-const error=document.getElementById("error")
-
-// --------------- Funciones de evento ----------------
+// --------------- Funciones de evento ---------------- //
 function convertirMoneda(event){
     const monto=parseFloat(montoIn.value);
 
@@ -39,14 +38,14 @@ function convertirMoneda(event){
         }
         if(tipod.value == "1")
         {
-            console.log("primera opcion");
+            
             event.preventDefault();
             return resultado.value = monto * 1.08 + " $";
         }
 
         if(tipod.value == "2")
         {
-            console.log("segunda opcion");
+            
             event.preventDefault();
             return resultado.value = monto * 0.93 + " € ";
         }
@@ -69,5 +68,14 @@ function convertirMoneda(event){
     return false
 }
 
+function domCargado(){
+    form=document.getElementById("conversorForm");
+    tipod=document.getElementById("tipod");
+    montoIn=document.getElementById("monto");
+    resultado=document.getElementById("resultado");
+    error=document.getElementById("error")
+}
+
 //----------------- Inicio de eventos-------------------
-form.addEventListener('submit',convertirMoneda);
+document.addEventListener('DOMContentLoaded', domCargado);
+document.addEventListener('submit',convertirMoneda);
