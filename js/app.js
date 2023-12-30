@@ -76,6 +76,6 @@ function domCargado(){
     error=document.getElementById("error")
 }
 
-//----------------- Inicio de eventos-------------------
+//----------------- Inicio de eventos------------------- //
 document.addEventListener('DOMContentLoaded', domCargado);
 document.addEventListener('submit',convertirMoneda);
